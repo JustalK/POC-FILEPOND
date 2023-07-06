@@ -1,30 +1,34 @@
-import { useState } from 'react';
-import styles from './app.module.scss';
-import { FilePond, registerPlugin } from 'react-filepond';
-import { FilePondInitialFile, FilePondFile } from 'filepond/types/index';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Pocs from './components/Pocs';
+import Poc1 from './components/Pocs/Poc1';
 
-import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
-
-// Import FilePond styles
-import 'filepond/dist/filepond.min.css';
-
-registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
-
-export function App() {
-  const [files] = useState([]);
+function App() {
   return (
-    <div>
-      <FilePond
-        files={files}
-        allowMultiple={true}
-        maxFiles={3}
-        server="/api"
-        name="files" /* sets the file input name, it's filepond by default */
-        labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
-      />
-    </div>
+    <Router>
+      <>
+        <div className="navigation">
+          <nav>
+            <ul>
+              {Object.keys(Pocs).map((e, index) => (
+                <li key={index}>
+                  <a href={`/${index + 1}`}>{e}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className="content">
+          <Routes>
+            {Object.keys(Pocs).map((e, index) => {
+              const Type = Pocs[e as keyof typeof Pocs];
+              return <Route path={`/${index + 1}`} element={<Type />} />;
+            })}
+            <Route path="/" element={<Poc1 />} />
+          </Routes>
+        </div>
+      </>
+    </Router>
   );
 }
 
