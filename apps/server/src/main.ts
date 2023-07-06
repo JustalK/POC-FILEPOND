@@ -3,8 +3,14 @@
  * This is only a minimal backend to get started.
  */
 
-import express from 'express';
+import express, { Request } from 'express';
 import * as path from 'path';
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+interface MulterRequest extends Request {
+  file: any;
+}
 
 const app = express();
 const cors = require('cors');
@@ -17,7 +23,9 @@ app.use(
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-app.post('/api', (req, res) => {
+app.post('/api', upload.single('documents'), (req: Request, res) => {
+  const files = (req as MulterRequest).file;
+  console.log(files);
   res.send({ message: 'Welcome to server!' });
 });
 
