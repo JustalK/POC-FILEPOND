@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Pocs from './components/Pocs';
 import Poc1 from './components/Pocs/Poc1';

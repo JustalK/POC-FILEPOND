@@ -18,7 +18,7 @@ export function Poc() {
         files={files}
         allowMultiple={true}
         maxFiles={3}
-        server="/api"
+        server="http://localhost:1338/api"
         name="files" /* sets the file input name, it's filepond by default */
         labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
       />

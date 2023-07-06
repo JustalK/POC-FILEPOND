@@ -51,7 +51,7 @@
         "buildTarget": "app:build",
         "hmr": true,
         "host": "0.0.0.0",
-        "port": 4389
+        "port": 1337
       },
       "configurations": {
         "development": {
