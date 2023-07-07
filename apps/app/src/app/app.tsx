@@ -21,7 +21,9 @@ function App() {
           <Routes>
             {Object.keys(Pocs).map((e, index) => {
               const Type = Pocs[e as keyof typeof Pocs];
-              return <Route path={`/${index + 1}`} element={<Type />} />;
+              return (
+                <Route key={index} path={`/${index + 1}`} element={<Type />} />
+              );
             })}
             <Route path="/" element={<Poc1 />} />
           </Routes>
