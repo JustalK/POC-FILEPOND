@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getServerUrl } from '../../../../libs/utils';
 import { FilePond, registerPlugin } from 'react-filepond';
 
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
@@ -18,7 +19,7 @@ export function Poc() {
         files={files}
         allowMultiple={true}
         maxFiles={3}
-        server="http://localhost:1338/poc1/upload"
+        server={getServerUrl('poc1')}
         name="documents" /* sets the file input name, it's filepond by default */
         labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
       />
