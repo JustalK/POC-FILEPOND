@@ -1,0 +1,23 @@
+.poc2 {
+    & .filepond--wrapper {
+        border: 1px dashed black;
+        max-width: 500px;
+        margin: 100px auto;
+        border-radius: 8px;
+    }
+
+    & .filepond--root {
+        margin-bottom: 0;
+    }
+    & .filepond--label-action {
+        text-decoration: none;
+    }
+
+    & .filepond--panel-root {
+        background-color: #efefef;
+    }
+
+    & .filepond--credits {
+        display: none;
+    }
+}
