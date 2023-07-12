@@ -9,7 +9,7 @@ interface MulterRequest extends Request {
 
 router.post(
   '/upload',
-  multer({ dest: 'uploads/poc1' }).single('files'),
+  multer({ dest: 'uploads/poc2' }).single('files'),
   (req: Request, res) => {
     const files = (req as MulterRequest).file;
     console.log(files);

@@ -49,7 +49,7 @@ export function Poc() {
         onupdatefiles={setFiles}
         allowMultiple={true}
         filePosterMaxHeight={256}
-        server="/api"
+        server={getServerUrl('poc1')}
         name="files"
         labelIdle='<span class="filepond--label-action">Browse</span> / Edit the upload'
         imageEditor={{
