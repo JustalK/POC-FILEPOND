@@ -4,6 +4,7 @@ I discovered `Filepond` recently, a simple library for uploading files to a serv
 
 ## Pocs
 
+- **Poc3**: Default component - only upload
 - **Poc4**: Restrict upload depending of file extension (server side)
 - **Poc5**: Restrict upload depending of file extension (client side)
 - **Poc6**: Restrict size of image (client side) [Work only with image]

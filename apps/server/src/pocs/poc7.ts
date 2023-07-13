@@ -4,11 +4,10 @@ import { addDelete } from '../interfaces/router';
 import { multer, MulterRequest } from '../interfaces/multer';
 import { RESPONSE_200 } from '../messages/response';
 
-function checkPngImage(req, file, cb) {
+function limiteImageSize(req, file, cb) {
   const { mimetype } = file;
   if (mimetype === 'image/png') {
     cb(null, true);
-    console.log('good');
   } else if (mimetype) {
     req.fileValidationError = 'Wrong type';
     cb(null, false, req.fileValidationError);
@@ -19,8 +18,9 @@ function checkPngImage(req, file, cb) {
 
 router.post(
   '/upload',
-  multer({ dest: 'uploads/poc4', fileFilter: checkPngImage }).single('files'),
+  multer({ dest: 'uploads/poc7', limits: { fileSize: 10 } }).single('files'),
   (req: MulterRequest & { fileValidationError: Error }, res) => {
+    console.log(res);
     if (req.fileValidationError) {
       return res.status(500).send({
         message: req.fileValidationError,
