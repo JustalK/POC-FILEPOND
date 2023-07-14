@@ -6,7 +6,7 @@ export const router = express.Router();
 export const addPost = (r, poc: string) => {
   r.post(
     '/upload',
-    multer({ dest: 'uploads/poc1' }).single('files'),
+    multer({ dest: `uploads/${poc}` }).single('files'),
     (req: Request, res) => {
       const files = (req as MulterRequest).file;
       res.send({ ...RESPONSE_200, files });

@@ -18,6 +18,7 @@ app.use(
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/poc1', require('./pocs/poc1'));
 app.use('/poc2', require('./pocs/poc2'));
+app.use('/poc3', require('./pocs/poc3'));
 
 const port = process.env.NX_SERVER_PORT || 1338;
 const server = app.listen(port, () => {

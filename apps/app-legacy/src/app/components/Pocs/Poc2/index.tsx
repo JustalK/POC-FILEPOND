@@ -34,7 +34,7 @@ export function Poc() {
         files={files}
         allowMultiple={true}
         maxFiles={3}
-        server={getServerUrl('poc1')}
+        server={getServerUrl('poc2')}
         name="documents" /* sets the file input name, it's filepond by default */
         labelIdle='<span class="filepond--label-action">Browse</span> / Edit the upload'
         onupdatefiles={setFiles}
