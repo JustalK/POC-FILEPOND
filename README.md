@@ -2,6 +2,11 @@
 
 I discovered `Filepond` recently, a simple library for uploading files to a server. With many plugins available, the functionnalities of the libraries can be enhanced.
 
+## Pocs
+
+- **Poc4**: Restrict upload depending of file extension (server side)
+- **Poc5**: Restrict upload depending of file extension (client side)
+
 ## Running
 
 For running the project, use the command in the _package.json_:
