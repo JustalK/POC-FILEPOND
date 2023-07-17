@@ -5,6 +5,7 @@ import Poc4 from './Poc4';
 import Poc5 from './Poc5';
 import Poc6 from './Poc6';
 import Poc7 from './Poc7';
+import Poc8 from './Poc8';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
@@ -15,4 +16,5 @@ export default {
   Poc5,
   Poc6,
   Poc7,
+  Poc8,
 };

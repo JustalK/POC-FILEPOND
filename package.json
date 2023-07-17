@@ -29,6 +29,7 @@
     "react-filepond": "^7.1.2",
     "react-router-dom": "^6.14.1",
     "react-svg": "^16.1.18",
+    "sharp": "^0.32.3",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

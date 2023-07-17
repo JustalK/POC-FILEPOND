@@ -9,6 +9,7 @@ I discovered `Filepond` recently, a simple library for uploading files to a serv
 - **Poc5**: Restrict upload depending of file extension (client side)
 - **Poc6**: Restrict size of image (client side) [Work only with image]
 - **Poc7**: Restrict size of file (server side)
+- **Poc8**: Resize image with Filepond (client size & server side with Sharp)
 
 ## Running
 
@@ -30,3 +31,7 @@ $ node -v
 # Get the latest version of ubuntu
 $ lsb_release -a
 ```
+
+## Useful Links
+
+- [Sharp tutorial](https://www.codemzy.com/blog/sharp-with-multer-reduce-image-sizes)
