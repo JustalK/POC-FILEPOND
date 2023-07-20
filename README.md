@@ -10,6 +10,7 @@ I discovered `Filepond` recently, a simple library for uploading files to a serv
 - **Poc6**: Restrict size of image (client side) [Work only with image]
 - **Poc7**: Restrict size of file (server side)
 - **Poc8**: Resize image with Filepond (client size & server side with Sharp)
+- **Poc9**: Drawing on the image with ctx and filepond (client)
 
 ## Running
 

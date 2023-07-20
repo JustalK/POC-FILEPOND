@@ -1,1 +1,1 @@
-export const NB_OF_POCS = 8;
+export const NB_OF_POCS = 9;
