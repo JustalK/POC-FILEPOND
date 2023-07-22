@@ -1,6 +1,12 @@
 # POC-FILEPOND
 
-I discovered `Filepond` recently, a simple library for uploading files to a server. With many plugins available, the functionnalities of the libraries can be enhanced.
+![./documentation/1.png](./documentation/1.png)
+
+![./documentation/2.png](./documentation/2.png)
+
+I discovered `Filepond` recently, a simple library for uploading files to a server. With many plugins available, the functionnalities of the libraries can be enhanced. I made some test to try to modify the image, resize it, add a watermark...
+
+Using **Pictura**, it's also possible to add a nice edit functionnality.
 
 ## Pocs
 
